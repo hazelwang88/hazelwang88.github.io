@@ -132,12 +132,14 @@
 
     .contact-list {
       display: grid;
-      gap: 40px;
+      gap: 28px;
     }
 
     .contact-item {
       display: grid;
-      gap: 10px;
+      grid-template-columns: 190px 1fr;
+      column-gap: 28px;
+      align-items: start;
     }
 
     .contact-label {
@@ -146,6 +148,7 @@
       letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #7280a6;
+      padding-top: 4px;
     }
 
     .contact-value {
@@ -157,10 +160,12 @@
     }
 
     .contact-note {
+      grid-column: 2;
       font-size: 16px;
       line-height: 1.75;
       font-weight: 500;
       color: #7280a6;
+      margin-top: -2px;
     }
 
     .contact-value a {
@@ -251,6 +256,16 @@
         font-size: 18px;
       }
 
+      .contact-item {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+      }
+
+      .contact-note {
+        grid-column: auto;
+        margin-top: 0;
+      }
+
       .side-nav-links a {
         white-space: normal;
       }
@@ -298,7 +313,8 @@
 
             <div class="contact-item">
               <div class="contact-label">Email</div>
-              <div class="contact-value">pwang2@student.otis.edu</div>
+              <div class="contact-value">
+                <a href="mailto:pwang2@student.otis.edu">pwang2@student.otis.edu</a>
               </div>
             </div>
 
@@ -313,6 +329,7 @@
               <div class="contact-label">Rednote</div>
               <div class="contact-value">
                 <a href="https://xhslink.com/m/15wkTSaDDe9" target="_blank" rel="noopener noreferrer">SAWSHEEP</a>
+              </div>
             </div>
 
             <div class="contact-item">
