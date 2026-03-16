@@ -177,6 +177,32 @@
       background: rgba(255,255,255,0.42);
     }
 
+    .mobile-fab-wrap {
+      display: none;
+    }
+
+    .mobile-fab {
+      border: none;
+      background: rgba(255, 255, 255, 0.88);
+      color: #7280a6;
+      font-family: "Manrope", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
     footer {
       margin-top: 28px;
       font-size: 13px;
@@ -196,18 +222,68 @@
 
     @media (max-width: 800px) {
       .page { padding: 22px 18px 40px; }
+
+      .topbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+
       .site-title h1 { font-size: 52px; }
       .site-title p { font-size: 15px; }
       .title-sticker { width: 90px; }
+
+      .lang-switch {
+        gap: 10px;
+        margin-top: 0;
+      }
+
       .lang-switch a {
         padding: 10px 16px;
         font-size: 15px;
       }
+
       .row-2, .row-3 { grid-template-columns: 1fr; }
       .img-box { height: auto; }
       .img-box img { height: auto; }
       .section-title { font-size: 28px; }
-      .side-nav-links a { white-space: normal; }
+
+      .side-nav {
+        display: none;
+      }
+
+      .mobile-fab-wrap {
+        display: block;
+      }
+
+      .mobile-fab {
+        position: fixed;
+        right: 16px;
+        bottom: 18px;
+        z-index: 999;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        right: 16px;
+        bottom: 84px;
+        z-index: 998;
+        width: 230px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.65);
+        color: #7280a6;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -274,9 +350,26 @@
       </aside>
     </div>
 
+    <div class="mobile-fab-wrap">
+      <button class="mobile-fab" onclick="toggleMobileMenu()">目录</button>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="cn.html">返回首页</a>
+        <a href="#traditional">传统速写</a>
+        <a href="#digital">数码绘画</a>
+      </div>
+    </div>
+
     <footer>
       © 2026 Hazel Wang
     </footer>
   </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
