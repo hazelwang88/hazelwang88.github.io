@@ -37,7 +37,32 @@
 
     .topbar {
       margin-bottom: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .lang-switch a {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.35);
+      color: #2b343a;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255, 255, 255, 0.55);
+    }
+
 
     .site-title h1 {
       margin: 0;
