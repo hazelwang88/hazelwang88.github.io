@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Design - Hazel Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", Arial, sans-serif;
+      background: linear-gradient(135deg, #f5eee2 0%, #e2ebf1 42%, #c5d9e8 100%);
+      color: #1f2529;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1780px;
+      margin: 0 auto;
+      padding: 36px 56px 60px;
+    }
+
+    .topbar {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+
+    .site-title h1 {
+      margin: 0;
+      font-size: 88px;
+      line-height: 1;
+      font-family: "Carter One", cursive;
+      font-weight: 400;
+      color: #1c2226;
+    }
+
+    .site-title p {
+      margin: 10px 0 0;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #5e7686;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .lang-switch a {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.35);
+      color: #2b343a;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 28px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #5e7686;
+    }
+
+    .section-title {
+      margin: 0 0 28px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #5e7686;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .gallery-item {
+      background: rgba(255, 255, 255, 0.28);
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .gallery-item p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .site-title h1 {
+        font-size: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <div class="site-title">
+        <h1>Hazel Wang</h1>
+        <p>Character Design</p>
+      </div>
+
+      <div class="lang-switch">
+        <a href="character-design.html">EN</a>
+        <a href="character-design-cn.html">中文</a>
+      </div>
+    </header>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+
+    <h2 class="section-title">Character Design</h2>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="character1.png" alt="Character design 1">
+        <p>Character design description here.</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="character2.png" alt="Character design 2">
+        <p>Character design description here.</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
