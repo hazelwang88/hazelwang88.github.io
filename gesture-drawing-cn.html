@@ -9,8 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -23,7 +28,10 @@
       background-attachment: fixed;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .page {
       max-width: 1780px;
@@ -82,15 +90,15 @@
     .lang-switch a {
       display: inline-block;
       padding: 12px 20px;
-      background: rgba(255,255,255,0.22);
+      background: rgba(255, 255, 255, 0.22);
       color: #6b79a1;
       font-size: 17px;
       font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
     .lang-switch a:hover {
-      background: rgba(255,255,255,0.62);
+      background: rgba(255, 255, 255, 0.62);
     }
 
     .page-layout {
@@ -100,7 +108,9 @@
       align-items: start;
     }
 
-    .content-column { min-width: 0; }
+    .content-column {
+      min-width: 0;
+    }
 
     .back-link {
       display: inline-block;
@@ -110,7 +120,9 @@
       color: #7280a6;
     }
 
-    .section-block { margin-bottom: 72px; }
+    .section-block {
+      margin-bottom: 72px;
+    }
 
     .section-title {
       margin: 0 0 22px;
@@ -127,8 +139,17 @@
       margin-bottom: 18px;
     }
 
-    .row-2 { grid-template-columns: repeat(2, 1fr); }
-    .row-3 { grid-template-columns: repeat(3, 1fr); }
+    .row-1 {
+      grid-template-columns: 1fr;
+    }
+
+    .row-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .img-box {
       background: transparent;
@@ -138,6 +159,10 @@
       align-items: center;
       justify-content: center;
       height: 420px;
+    }
+
+    .row-1 .img-box {
+      height: 520px;
     }
 
     .img-box img {
@@ -151,9 +176,9 @@
       position: sticky;
       top: 28px;
       align-self: start;
-      background: rgba(255,255,255,0.22);
+      background: rgba(255, 255, 255, 0.22);
       padding: 30px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
     }
 
     .side-nav-links {
@@ -165,7 +190,7 @@
     .side-nav-links a {
       display: block;
       padding: 18px 20px;
-      background: rgba(255,255,255,0.22);
+      background: rgba(255, 255, 255, 0.22);
       color: #7280a6;
       font-size: 18px;
       font-weight: 700;
@@ -174,7 +199,7 @@
     }
 
     .side-nav-links a:hover {
-      background: rgba(255,255,255,0.42);
+      background: rgba(255, 255, 255, 0.42);
     }
 
     .mobile-fab-wrap {
@@ -211,26 +236,49 @@
     }
 
     @media (max-width: 1200px) {
-      .page-layout { grid-template-columns: 1fr; }
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+
       .side-nav {
         position: static;
         margin-bottom: 32px;
       }
-      .row-3 { grid-template-columns: repeat(2, 1fr); }
-      .img-box { height: 320px; }
+
+      .row-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .img-box {
+        height: 320px;
+      }
+
+      .row-1 .img-box {
+        height: 460px;
+      }
     }
 
     @media (max-width: 800px) {
-      .page { padding: 22px 18px 40px; }
+      .page {
+        padding: 22px 18px 40px;
+      }
 
       .topbar {
         flex-direction: column;
         gap: 16px;
       }
 
-      .site-title h1 { font-size: 52px; }
-      .site-title p { font-size: 15px; }
-      .title-sticker { width: 90px; }
+      .site-title h1 {
+        font-size: 52px;
+      }
+
+      .site-title p {
+        font-size: 15px;
+      }
+
+      .title-sticker {
+        width: 90px;
+      }
 
       .lang-switch {
         gap: 10px;
@@ -242,10 +290,27 @@
         font-size: 15px;
       }
 
-      .row-2, .row-3 { grid-template-columns: 1fr; }
-      .img-box { height: auto; }
-      .img-box img { height: auto; }
-      .section-title { font-size: 28px; }
+      .row-1,
+      .row-2,
+      .row-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .img-box {
+        height: auto;
+      }
+
+      .row-1 .img-box {
+        height: auto;
+      }
+
+      .img-box img {
+        height: auto;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
 
       .side-nav {
         display: none;
@@ -289,6 +354,7 @@
 </head>
 <body>
   <div class="page">
+
     <header class="topbar">
       <div class="site-title">
         <div class="title-row">
@@ -305,6 +371,7 @@
     </header>
 
     <div class="page-layout">
+
       <main class="content-column">
         <a class="back-link" href="cn.html">← 返回首页</a>
 
@@ -378,6 +445,7 @@
           <a href="#digital">数码绘画</a>
         </div>
       </aside>
+
     </div>
 
     <div class="mobile-fab-wrap">
@@ -393,6 +461,7 @@
     <footer>
       © 2026 Hazel Wang
     </footer>
+
   </div>
 
   <script>
