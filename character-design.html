@@ -47,6 +47,12 @@
       padding-top: 10px;
     }
 
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .site-title h1 {
       margin: 0;
       font-size: 88px;
@@ -54,6 +60,14 @@
       font-family: "Carter One", cursive;
       font-weight: 400;
       color: #66739a;
+    }
+
+    .title-sticker {
+      width: 72px;
+      height: auto;
+      display: block;
+      transform: rotate(6deg) translateY(-4px);
+      flex-shrink: 0;
     }
 
     .site-title p {
@@ -219,6 +233,10 @@
         font-size: 15px;
       }
 
+      .title-sticker {
+        width: 42px;
+      }
+
       .lang-switch a {
         padding: 10px 16px;
         font-size: 15px;
@@ -253,7 +271,10 @@
 
     <header class="topbar">
       <div class="site-title">
-        <h1>Hazel Wang</h1>
+        <div class="title-row">
+          <h1>Hazel Wang</h1>
+          <img src="sticker.png" alt="" class="title-sticker">
+        </div>
         <p>Character &amp; Prop Design</p>
       </div>
 
