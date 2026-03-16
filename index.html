@@ -12,9 +12,9 @@
 
     body {
       margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: #f7fcef;
-      color: #1f2a1f;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef2f4;
+      color: #1f2529;
     }
 
     a {
@@ -24,212 +24,194 @@
 
     .page {
       width: 100%;
-      padding: 28px 28px 40px;
+      padding: 32px 40px 60px;
     }
 
     .topbar {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-bottom: 28px;
+      margin-bottom: 42px;
     }
 
     .site-title h1 {
       margin: 0;
-      font-size: 84px;
+      font-size: 64px;
       line-height: 0.95;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: -2px;
-      color: #1b241b;
       text-transform: uppercase;
+      color: #1c2226;
     }
 
     .site-title p {
-      margin: 12px 0 0;
+      margin: 10px 0 0;
       font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: #7cff75;
+      font-weight: 700;
+      letter-spacing: 0.3px;
       text-transform: uppercase;
+      color: #5e7686;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 240px;
-      gap: 24px;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 40px;
       align-items: start;
     }
 
     .main-column {
       display: grid;
-      gap: 24px;
+      gap: 40px;
     }
 
     .side-column {
       position: sticky;
-      top: 24px;
+      top: 28px;
       align-self: start;
     }
 
     .block {
-      border-radius: 32px;
-      padding: 28px;
-      box-shadow: 0 12px 30px rgba(120, 255, 120, 0.10);
-      background: linear-gradient(135deg, #ffffff 0%, #f0ffe9 45%, #b8ff97 100%);
+      background: #f9fbfc;
+      padding: 34px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     }
 
     .about-block {
-      min-height: 360px;
       display: grid;
-      grid-template-columns: 1.2fr 0.9fr;
-      gap: 24px;
-      align-items: stretch;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: start;
+      min-height: 340px;
     }
 
-    .about-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .about-text h2 {
+    .section-label {
       margin: 0 0 18px;
-      font-size: 18px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      color: #2b352b;
+      color: #6a7d89;
     }
 
     .about-text p {
       margin: 0;
-      font-size: 20px;
-      line-height: 1.7;
-      color: #283228;
+      font-size: 21px;
+      line-height: 1.75;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: #1f2529;
       max-width: 95%;
     }
 
     .about-image-wrap {
-      height: 100%;
-      min-height: 280px;
-      border-radius: 26px;
+      background: #e9eef1;
+      min-height: 300px;
       overflow: hidden;
-      background: rgba(255,255,255,0.45);
     }
 
     .about-image-wrap img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
       display: block;
-    }
-
-    .reel-block h2 {
-      margin: 0 0 16px;
-      font-size: 18px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #2b352b;
+      object-fit: cover;
     }
 
     .reel-block video {
       width: 100%;
       display: block;
-      border-radius: 24px;
-      background: #dfffd0;
+      background: #dfe7ec;
+      min-height: 520px;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 30px;
     }
 
     .project-card {
-      border-radius: 30px;
-      padding: 22px;
-      background: linear-gradient(160deg, #ffffff 0%, #efffe7 45%, #a5ff85 100%);
-      box-shadow: 0 12px 28px rgba(120, 255, 120, 0.12);
+      background: #f9fbfc;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     }
 
     .project-card img {
       width: 100%;
-      height: 280px;
+      height: 260px;
       object-fit: cover;
       display: block;
-      border-radius: 22px;
+      background: #e1e8ed;
       margin-bottom: 18px;
-      background: rgba(255,255,255,0.55);
     }
 
     .project-card h3 {
-      margin: 0 0 10px;
-      font-size: 32px;
+      margin: 0 0 12px;
+      font-size: 28px;
       line-height: 1.05;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: -1px;
       text-transform: uppercase;
-      color: #1e261e;
+      color: #1d2428;
     }
 
     .project-card p {
-      margin: 8px 0;
-      font-size: 17px;
+      margin: 10px 0;
+      font-size: 16px;
       line-height: 1.65;
-      color: #2d372d;
+      font-weight: 700;
+      color: #2b343a;
     }
 
     .label {
-      font-weight: 900;
-      color: #1f2a1f;
+      display: inline-block;
+      margin-bottom: 2px;
+      color: #607786;
       text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.8px;
     }
 
     .nav-panel {
-      border-radius: 30px;
-      padding: 24px;
-      background: linear-gradient(180deg, #ffffff 0%, #efffe8 50%, #9dff7e 100%);
-      box-shadow: 0 12px 28px rgba(120, 255, 120, 0.12);
+      background: #f7f9fa;
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      min-height: 420px;
     }
 
     .nav-panel h2 {
-      margin: 0 0 18px;
+      margin: 0 0 22px;
       font-size: 18px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: #243024;
+      color: #233038;
     }
 
     .button-grid {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     .button {
       display: block;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.65);
+      padding: 16px 18px;
+      background: #e9eff3;
       font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 0.4px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
       text-transform: uppercase;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .button:hover {
+      background: #dde6ec;
       transform: translateX(4px);
-      background: rgba(255, 255, 255, 0.9);
     }
 
     footer {
-      margin-top: 24px;
+      margin-top: 28px;
       font-size: 13px;
-      color: #5d6b5d;
-      padding-left: 4px;
+      font-weight: 700;
+      color: #748592;
     }
 
     @media (max-width: 1100px) {
@@ -239,6 +221,10 @@
 
       .side-column {
         position: static;
+      }
+
+      .nav-panel {
+        min-height: auto;
       }
 
       .button-grid {
@@ -253,31 +239,34 @@
 
     @media (max-width: 800px) {
       .page {
-        padding: 20px 18px 30px;
+        padding: 22px 18px 40px;
       }
 
       .site-title h1 {
-        font-size: 50px;
+        font-size: 46px;
       }
 
       .site-title p {
         font-size: 15px;
       }
 
-      .about-block {
-        grid-template-columns: 1fr;
-      }
-
+      .about-block,
       .projects-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-card img {
-        height: 220px;
+      .block,
+      .project-card,
+      .nav-panel {
+        padding: 22px;
       }
 
       .about-text p {
         font-size: 18px;
+      }
+
+      .reel-block video {
+        min-height: 260px;
       }
     }
   </style>
@@ -295,9 +284,10 @@
     <div class="layout">
 
       <main class="main-column">
+
         <section class="block about-block">
           <div class="about-text">
-            <h2>About Me</h2>
+            <p class="section-label">About Me</p>
             <p>
               I'm a 28-year-old animator from Guangzhou, China. After earning a degree in
               Traditional Chinese Medicine, I moved to the United States to study animation.
@@ -312,7 +302,7 @@
         </section>
 
         <section class="block reel-block">
-          <h2>Animation Reel</h2>
+          <p class="section-label">Animation Reel</p>
           <video controls>
             <source src="reel.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -334,6 +324,7 @@
             <p><span class="label">My Role</span><br>Visual Development / Background Painting</p>
           </article>
         </section>
+
       </main>
 
       <aside class="side-column">
