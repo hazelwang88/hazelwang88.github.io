@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -227,6 +227,32 @@
       transform: translateX(4px);
     }
 
+    .mobile-fab-wrap {
+      display: none;
+    }
+
+    .mobile-fab {
+      border: none;
+      background: rgba(255, 255, 255, 0.88);
+      color: #7280a6;
+      font-family: "Manrope", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
     footer {
       margin-top: 28px;
       font-size: 13px;
@@ -240,26 +266,16 @@
       }
 
       .side-column {
-        position: static;
+        display: none;
       }
 
-      .nav-panel {
-        min-height: auto;
-      }
-
-      .button-grid {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        width: fit-content;
-      }
-    }
-
-    @media (max-width: 800px) {
       .page {
         padding: 22px 18px 40px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        gap: 16px;
       }
 
       .site-title h1 {
@@ -274,6 +290,11 @@
         width: 90px;
       }
 
+      .lang-switch {
+        gap: 10px;
+        margin-top: 0;
+      }
+
       .lang-switch a {
         padding: 10px 16px;
         font-size: 15px;
@@ -283,8 +304,7 @@
         grid-template-columns: 1fr;
       }
 
-      .block,
-      .nav-panel {
+      .block {
         padding: 22px;
       }
 
@@ -294,6 +314,40 @@
 
       .reel-block video {
         min-height: 260px;
+      }
+
+      .mobile-fab-wrap {
+        display: block;
+      }
+
+      .mobile-fab {
+        position: fixed;
+        right: 16px;
+        bottom: 18px;
+        z-index: 999;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        right: 16px;
+        bottom: 84px;
+        z-index: 998;
+        width: 230px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.65);
+        color: #7280a6;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
       }
     }
   </style>
@@ -361,10 +415,29 @@
 
     </div>
 
+    <div class="mobile-fab-wrap">
+      <button class="mobile-fab" onclick="toggleMobileMenu()">☰</button>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="projects.html">Projects</a>
+        <a href="character-design.html">Character + Prop Design</a>
+        <a href="concept-background.html">Concept + Background Painting</a>
+        <a href="gesture-drawing.html">Gesture Drawing</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </div>
+
     <footer>
       © 2026 Hazel Wang
     </footer>
 
   </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
