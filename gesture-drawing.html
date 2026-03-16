@@ -139,6 +139,10 @@
       margin-bottom: 18px;
     }
 
+    .row-1 {
+      grid-template-columns: 1fr;
+    }
+
     .row-2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -155,6 +159,10 @@
       align-items: center;
       justify-content: center;
       height: 420px;
+    }
+
+    .row-1 .img-box {
+      height: 520px;
     }
 
     .img-box img {
@@ -244,6 +252,10 @@
       .img-box {
         height: 320px;
       }
+
+      .row-1 .img-box {
+        height: 460px;
+      }
     }
 
     @media (max-width: 800px) {
@@ -278,12 +290,17 @@
         font-size: 15px;
       }
 
+      .row-1,
       .row-2,
       .row-3 {
         grid-template-columns: 1fr;
       }
 
       .img-box {
+        height: auto;
+      }
+
+      .row-1 .img-box {
         height: auto;
       }
 
