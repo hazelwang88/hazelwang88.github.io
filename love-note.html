@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOVE NOTE - Hazel Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "Manrope", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(255,226,196,0.55) 0%, rgba(214,231,244,0.35) 45%, rgba(167,205,230,0.45) 100%),
+        linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
+      color: #5f6d94; min-height: 100vh; background-attachment: fixed;
+    }
+    a { text-decoration: none; color: inherit; }
+    .page { max-width: 1780px; margin: 0 auto; padding: 36px 56px 60px; }
+    .topbar { margin-bottom: 48px; display: flex; justify-content: space-between; align-items: flex-start; padding-top: 10px; }
+    .title-row { display: flex; align-items: center; gap: 0; }
+    .site-title h1 { margin: 0; font-size: 88px; line-height: 1; font-family: "Carter One", cursive; font-weight: 400; color: #66739a; }
+    .title-sticker { width: 150px; height: auto; display: block; transform: rotate(6deg) translateY(-6px); }
+    .site-title p { margin: 10px 0 0; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: #7280a6; }
+    .page-layout { display: grid; grid-template-columns: 1fr 320px; gap: 42px; }
+    .back-link { display: inline-block; margin-bottom: 30px; font-size: 17px; font-weight: 700; color: #7280a6; }
+    .card { background: rgba(255,255,255,0.22); padding: 30px; box-shadow: 0 6px 18px rgba(0,0,0,0.03); }
+    .hero-title { margin: 0 0 8px; font-size: 46px; font-weight: 800; color: #7280a6; text-transform: uppercase; }
+    .hero-sub { margin: 0; font-size: 18px; line-height: 1.8; }
+    .status-box { margin-top: 24px; background: rgba(255,255,255,0.28); }
+    .status-title { margin: 0 0 10px; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; color: #7280a6; font-weight: 700; }
+    .status-text { margin: 0; font-size: 18px; line-height: 1.8; }
+    .info-grid { display: grid; grid-template-columns: 220px 1fr; gap: 18px 24px; margin-top: 24px; }
+    .info-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #7280a6; }
+    .info-value { font-size: 17px; line-height: 1.8; }
+    .side-nav { position: sticky; top: 28px; background: rgba(255,255,255,0.22); padding: 30px; box-shadow: 0 4px 14px rgba(0,0,0,0.03); height: fit-content; }
+    .side-nav-links { display: flex; flex-direction: column; gap: 16px; }
+    .side-nav-links a { display: block; padding: 18px 20px; background: rgba(255,255,255,0.22); color: #7280a6; font-size: 18px; font-weight: 700; text-align: center; }
+    .mobile-fab-wrap { display: none; }
+    .mobile-fab { border: none; background: rgba(255,255,255,0.88); color: #7280a6; font-size: 15px; font-weight: 700; width: 56px; height: 56px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+    .mobile-menu { display: none; } .mobile-menu.open { display: flex; }
+    footer { margin-top: 28px; font-size: 13px; font-weight: 700; color: #7280a6; }
+    @media (max-width:800px){ .page{padding:22px 18px 40px;} .page-layout{grid-template-columns:1fr;} .topbar{flex-direction:column;gap:16px;} .site-title h1{font-size:52px;} .title-sticker{width:90px;} .hero-title{font-size:34px;} .info-grid{grid-template-columns:1fr;} .side-nav{display:none;} .mobile-fab-wrap{display:block;} .mobile-fab{position:fixed; right:16px; bottom:18px; z-index:999;} .mobile-menu{position:fixed; right:16px; bottom:84px; z-index:998; width:220px; padding:12px; background:rgba(255,255,255,0.92); box-shadow:0 10px 24px rgba(0,0,0,0.12); flex-direction:column; gap:10px;} .mobile-menu a{display:block; padding:12px 14px; background:rgba(255,255,255,0.65); text-align:center; font-weight:700; color:#7280a6;} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="site-title">
+        <div class="title-row"><h1>Hazel Wang</h1><img src="sticker.PNG" alt="" class="title-sticker"></div>
+        <p>Project</p>
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <main>
+        <a class="back-link" href="projects.html">← Back to Projects</a>
+
+        <section class="card">
+          <h2 class="hero-title">LOVE NOTE</h2>
+          <p class="hero-sub">The boy runs to get the love letter the girl living upstairs throws down to him.</p>
+        </section>
+
+        <section class="card status-box">
+          <p class="status-title">Status</p>
+          <p class="status-text">Still in progress.</p>
+        </section>
+
+        <section class="card" style="margin-top:24px;">
+          <div class="info-grid">
+            <div class="info-label">My Role</div>
+            <div class="info-value">Character Designer, 2D Animator, Cleanup Artist and Colorist</div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="side-nav">
+        <div class="side-nav-links">
+          <a href="projects.html">Back to Projects</a>
+          <a href="index.html">Home</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="mobile-fab-wrap">
+      <button class="mobile-fab" onclick="toggleMobileMenu()">☰</button>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="projects.html">Back to Projects</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Hazel Wang</footer>
+  </div>
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById("mobileMenu").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
