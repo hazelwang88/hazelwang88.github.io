@@ -23,7 +23,7 @@
       background:
         linear-gradient(135deg, rgba(255, 226, 196, 0.55) 0%, rgba(214, 231, 244, 0.35) 45%, rgba(167, 205, 230, 0.45) 100%),
         linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
-      color: #243038;
+      color: #5f6d94;
       min-height: 100vh;
       background-attachment: fixed;
     }
@@ -63,7 +63,7 @@
       font-weight: 700;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      color: #4f7288;
+      color: #7280a6;
     }
 
     .lang-switch {
@@ -77,7 +77,7 @@
       display: inline-block;
       padding: 12px 20px;
       background: rgba(255, 255, 255, 0.22);
-      color: #46667b;
+      color: #6b79a1;
       font-size: 17px;
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
@@ -89,7 +89,7 @@
 
     .page-layout {
       display: grid;
-      grid-template-columns: 1fr 300px;
+      grid-template-columns: 1fr 380px;
       gap: 56px;
       align-items: start;
     }
@@ -101,9 +101,9 @@
     .back-link {
       display: inline-block;
       margin-bottom: 36px;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 700;
-      color: #4f7288;
+      color: #7280a6;
     }
 
     .section-block {
@@ -115,7 +115,7 @@
       font-size: 34px;
       line-height: 1.1;
       font-weight: 800;
-      color: #4f7288;
+      color: #7280a6;
       scroll-margin-top: 30px;
     }
 
@@ -159,16 +159,6 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
     }
 
-    .side-nav-title {
-      margin: 0 0 18px;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #4f7288;
-      text-align: center;
-    }
-
     .side-nav-links {
       display: flex;
       flex-direction: column;
@@ -179,17 +169,18 @@
       display: block;
       padding: 18px 20px;
       background: rgba(255, 255, 255, 0.22);
-      color: #4f7288;
+      color: #7280a6;
       font-size: 18px;
       font-weight: 700;
       text-align: center;
+      white-space: nowrap;
     }
 
     .side-nav-links a:hover {
       background: rgba(255, 255, 255, 0.42);
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
       .page-layout {
         grid-template-columns: 1fr;
       }
@@ -242,6 +233,10 @@
 
       .section-title {
         font-size: 28px;
+      }
+
+      .side-nav-links a {
+        white-space: normal;
       }
     }
   </style>
