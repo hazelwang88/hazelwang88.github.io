@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系方式 - Hazel Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(255, 226, 196, 0.55) 0%, rgba(214, 231, 244, 0.35) 45%, rgba(167, 205, 230, 0.45) 100%),
+        linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
+      color: #5f6d94;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .page {
+      max-width: 1780px;
+      margin: 0 auto;
+      padding: 36px 56px 60px;
+    }
+
+    .topbar {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .site-title h1 {
+      margin: 0;
+      font-size: 88px;
+      line-height: 1;
+      font-family: "Carter One", cursive;
+      font-weight: 400;
+      color: #66739a;
+    }
+
+    .title-sticker {
+      width: 150px;
+      height: auto;
+      display: block;
+      transform: rotate(6deg) translateY(-6px);
+      flex-shrink: 0;
+    }
+
+    .site-title p {
+      margin: 10px 0 0;
+      font-size: 18px;
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7280a6;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .lang-switch a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.22);
+      color: #6b79a1;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255,255,255,0.62);
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .content-column { min-width: 0; }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 36px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #7280a6;
+    }
+
+    .content-card {
+      background: rgba(255,255,255,0.18);
+      padding: 34px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.025);
+    }
+
+    .section-title {
+      margin: 0 0 36px;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #7280a6;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 28px;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      column-gap: 28px;
+      align-items: start;
+    }
+
+    .contact-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #7280a6;
+      padding-top: 4px;
+    }
+
+    .contact-value {
+      font-size: 22px;
+      line-height: 1.7;
+      font-weight: 500;
+      color: #5f6d94;
+      word-break: break-word;
+    }
+
+    .contact-note {
+      grid-column: 2;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 500;
+      color: #7280a6;
+      margin-top: -2px;
+    }
+
+    .contact-value a {
+      color: #5f6d94;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 28px;
+      align-self: start;
+      background: rgba(255,255,255,0.22);
+      padding: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+
+    .side-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .side-nav-links a {
+      display: block;
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.22);
+      color: #7280a6;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .side-nav-links a:hover {
+      background: rgba(255,255,255,0.42);
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #7280a6;
+    }
+
+    @media (max-width: 1200px) {
+      .page-layout { grid-template-columns: 1fr; }
+      .side-nav {
+        position: static;
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .page { padding: 22px 18px 40px; }
+      .site-title h1 { font-size: 52px; }
+      .site-title p { font-size: 15px; }
+      .title-sticker { width: 90px; }
+      .lang-switch a {
+        padding: 10px 16px;
+        font-size: 15px;
+      }
+      .section-title { font-size: 28px; }
+      .content-card { padding: 22px; }
+      .contact-value { font-size: 18px; }
+      .contact-item {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+      }
+      .contact-note {
+        grid-column: auto;
+        margin-top: 0;
+      }
+      .side-nav-links a { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="site-title">
+        <div class="title-row">
+          <h1>Hazel Wang</h1>
+          <img src="sticker.PNG" alt="" class="title-sticker">
+        </div>
+        <p>联系方式</p>
+      </div>
+
+      <div class="lang-switch">
+        <a href="contact.html">EN</a>
+        <a href="contact-cn.html">中文</a>
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <main class="content-column">
+        <a class="back-link" href="cn.html">← 返回首页</a>
+
+        <section class="content-card">
+          <h2 class="section-title">联系方式</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-label">中国电话</div>
+              <div class="contact-value">+86 15088063987</div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">美国电话</div>
+              <div class="contact-value">+1 2139978079</div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">邮箱</div>
+              <div class="contact-value">
+                <a href="mailto:pwang2@student.otis.edu">pwang2@student.otis.edu</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">
+                <a href="https://www.instagram.com/saw.sheep?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">saw.sheep</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">小红书</div>
+              <div class="contact-value">
+                <a href="https://xhslink.com/m/15wkTSaDDe9" target="_blank" rel="noopener noreferrer">SAWSHEEP</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">哔哩哔哩</div>
+              <div class="contact-value">
+                <a href="https://b23.tv/2j3krS6" target="_blank" rel="noopener noreferrer">修改昵称叫什么好</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="side-nav">
+        <div class="side-nav-links">
+          <a href="cn.html">返回首页</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © 2026 Hazel Wang
+    </footer>
+  </div>
+</body>
+</html>
