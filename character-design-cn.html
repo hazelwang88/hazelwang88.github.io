@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>项目 - Hazel Wang</title>
+  <title>角色设计 - Hazel Wang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <style>
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -96,8 +95,8 @@
 
     .page-layout {
       display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 48px;
+      grid-template-columns: 1fr 320px;
+      gap: 42px;
       align-items: start;
     }
 
@@ -111,71 +110,41 @@
       color: #7280a6;
     }
 
+    .section-block { margin-bottom: 72px; }
+
     .section-title {
-      margin: 0 0 24px;
+      margin: 0 0 22px;
       font-size: 34px;
       line-height: 1.1;
       font-weight: 800;
       color: #7280a6;
+      scroll-margin-top: 30px;
     }
 
-    .projects-grid {
+    .row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .project-link {
-      display: block;
-    }
-
-    .project-card {
-      background: rgba(255,255,255,0.22);
-      padding: 24px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      height: 100%;
-    }
-
-    .project-link:hover .project-card {
-      background: rgba(255,255,255,0.34);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
+      gap: 18px;
       margin-bottom: 18px;
     }
 
-    .project-card h3 {
-      margin: 0 0 12px;
-      font-size: 28px;
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -1px;
-      text-transform: uppercase;
-      color: #7280a6;
+    .row-2 { grid-template-columns: repeat(2, 1fr); }
+    .row-3 { grid-template-columns: repeat(3, 1fr); }
+
+    .img-box {
+      background: transparent;
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 420px;
     }
 
-    .project-card p {
-      margin: 10px 0;
-      font-size: 16px;
-      line-height: 1.65;
-      font-weight: 700;
-      color: #5f6d94;
-    }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 2px;
-      color: #7280a6;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.8px;
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .side-nav {
@@ -221,6 +190,8 @@
         position: static;
         margin-bottom: 32px;
       }
+      .row-3 { grid-template-columns: repeat(2, 1fr); }
+      .img-box { height: 320px; }
     }
 
     @media (max-width: 800px) {
@@ -232,7 +203,9 @@
         padding: 10px 16px;
         font-size: 15px;
       }
-      .projects-grid { grid-template-columns: 1fr; }
+      .row-2, .row-3 { grid-template-columns: 1fr; }
+      .img-box { height: auto; }
+      .img-box img { height: auto; }
       .section-title { font-size: 28px; }
       .side-nav-links a { white-space: normal; }
     }
@@ -246,12 +219,12 @@
           <h1>Hazel Wang</h1>
           <img src="sticker.PNG" alt="" class="title-sticker">
         </div>
-        <p>项目</p>
+        <p>角色 + 道具设计</p>
       </div>
 
       <div class="lang-switch">
-        <a href="projects.html">EN</a>
-        <a href="projects-cn.html">中文</a>
+        <a href="character-design.html">EN</a>
+        <a href="character-design-cn.html">中文</a>
       </div>
     </header>
 
@@ -259,74 +232,84 @@
       <main class="content-column">
         <a class="back-link" href="cn.html">← 返回首页</a>
 
-        <h2 id="projects" class="section-title">项目</h2>
+        <section class="section-block">
+          <h2 id="character-design" class="section-title">角色设计</h2>
 
-        <section class="projects-grid">
-          <a class="project-link" href="today.html">
-            <article class="project-card">
-              <img src="project1.PNG" alt="Project 1">
-              <h3>TODAY</h3>
-              <p><span class="label">Logline</span><br>昨日的明天就是今日。当终点变成起点，我们究竟存在于哪一个瞬间？</p>
-              <p><span class="label">My Role</span><br>导演、角色与道具设计、分镜、Layout、二维动画、背景绘制</p>
-            </article>
-          </a>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd01.JPG" alt=""></div>
+            <div class="img-box"><img src="cd02.PNG" alt=""></div>
+          </div>
 
-          <a class="project-link" href="white-box.html">
-            <article class="project-card">
-              <img src="project2.PNG" alt="Project 2">
-              <h3>WHITE BOX</h3>
-              <p><span class="label">Logline</span><br>一位年轻的医学研究者直面动物实验背后的血腥现实。</p>
-              <p><span class="label">My Role</span><br>导演、角色与道具设计、分镜、二维动画、清线、上色</p>
-            </article>
-          </a>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd03.JPG" alt=""></div>
+            <div class="img-box"><img src="cd04.JPG" alt=""></div>
+          </div>
 
-          <a class="project-link" href="forest.html">
-            <article class="project-card">
-              <img src="p3.PNG" alt="Project 3">
-              <h3>FOREST</h3>
-              <p><span class="label">Logline</span><br>一对双胞胎被精灵引入神秘森林深处，才发现美丽之下潜藏着危险。</p>
-              <p><span class="label">My Role</span><br>角色与道具设计、分镜</p>
-            </article>
-          </a>
+          <div class="row row-3">
+            <div class="img-box"><img src="cd05.jpg" alt=""></div>
+            <div class="img-box"><img src="cd06.jpg" alt=""></div>
+            <div class="img-box"><img src="cd07.jpg" alt=""></div>
+          </div>
 
-          <a class="project-link" href="tadpole.html">
-            <article class="project-card">
-              <img src="p4.PNG" alt="Project 4">
-              <h3>TADPOLE</h3>
-              <p><span class="label">Logline</span><br>一个小女孩遇见了一只腹部裂开的巨型蝌蚪，并按照它的请求替它缝合伤口，却发现自己终究还是来晚了一步。</p>
-              <p><span class="label">My Role</span><br>导演、角色设计、分镜、动画、声音设计</p>
-            </article>
-          </a>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd08.jpg" alt=""></div>
+            <div class="img-box"><img src="cd09.jpg" alt=""></div>
+          </div>
 
-          <a class="project-link" href="love-note.html">
-            <article class="project-card">
-              <img src="p5.PNG" alt="Project 5">
-              <h3>LOVE NOTE</h3>
-              <p><span class="label">Logline</span><br>男孩奔跑着去捡住在楼上的女孩丢给他的情书。</p>
-              <p><span class="label">My Role</span><br>角色设计、二维动画、清线、上色</p>
-            </article>
-          </a>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd10.jpg" alt=""></div>
+            <div class="img-box"><img src="cd11.jpg" alt=""></div>
+          </div>
 
-          <a class="project-link" href="cat-fish.html">
-            <article class="project-card">
-              <img src="p6.PNG" alt="Project 6">
-              <h3>CAT &amp; FISH</h3>
-              <p><span class="label">Logline</span><br>一只猫把一条大鱼甩来甩去。</p>
-              <p><span class="label">My Role</span><br>二维动画、背景绘制、片名字卡设计、上色</p>
-            </article>
-          </a>
+          <div class="row row-3">
+            <div class="img-box"><img src="cd12.jpg" alt=""></div>
+            <div class="img-box"><img src="cd13.jpg" alt=""></div>
+            <div class="img-box"><img src="cd14.jpg" alt=""></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2 id="animal-character-design" class="section-title">动物角色设计</h2>
+
+          <div class="row row-3">
+            <div class="img-box"><img src="acd01.jpg" alt=""></div>
+            <div class="img-box"><img src="acd02.jpg" alt=""></div>
+            <div class="img-box"><img src="acd03.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="acd04.jpg" alt=""></div>
+            <div class="img-box"><img src="acd05.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-3">
+            <div class="img-box"><img src="acd06.jpg" alt=""></div>
+            <div class="img-box"><img src="acd07.jpg" alt=""></div>
+            <div class="img-box"><img src="acd08.jpg" alt=""></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2 id="prop-design" class="section-title">道具设计</h2>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="pd01.jpg" alt=""></div>
+            <div class="img-box"><img src="pd02.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="pd03.jpg" alt=""></div>
+            <div class="img-box"><img src="pd04.jpg" alt=""></div>
+          </div>
         </section>
       </main>
 
       <aside class="side-nav">
         <div class="side-nav-links">
           <a href="cn.html">返回首页</a>
-          <a href="today.html">TODAY</a>
-          <a href="white-box.html">WHITE BOX</a>
-          <a href="forest.html">FOREST</a>
-          <a href="tadpole.html">TADPOLE</a>
-          <a href="love-note.html">LOVE NOTE</a>
-          <a href="cat-fish.html">CAT &amp; FISH</a>
+          <a href="#character-design">角色设计</a>
+          <a href="#animal-character-design">动物角色</a>
+          <a href="#prop-design">道具设计</a>
         </div>
       </aside>
     </div>
