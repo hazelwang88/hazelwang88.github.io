@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -135,10 +135,22 @@
       gap: 30px;
     }
 
+    .project-link {
+      display: block;
+    }
+
     .project-card {
       background: rgba(255, 255, 255, 0.22);
       padding: 24px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+
+    .project-link:hover .project-card {
+      background: rgba(255, 255, 255, 0.34);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     }
 
     .project-card img {
@@ -286,53 +298,71 @@
         <h2 id="projects" class="section-title">PROJECTS</h2>
 
         <section class="projects-grid">
-          <article class="project-card">
-            <img src="project1.PNG" alt="Project 1">
-            <h3>TODAY</h3>
-            <p><span class="label">Logline</span><br>Today is the tomorrow of yesterday. When endings become beginnings, in which moment do we truly exist?</p>
-            <p><span class="label">My Role</span><br>Director, Character & Prop designer, Storyboard Artist, Layout Artist, 2D Animator and Background Painter</p>
-          </article>
+          <a class="project-link" href="today.html">
+            <article class="project-card">
+              <img src="project1.PNG" alt="Project 1">
+              <h3>TODAY</h3>
+              <p><span class="label">Logline</span><br>Today is the tomorrow of yesterday. When endings become beginnings, in which moment do we truly exist?</p>
+              <p><span class="label">My Role</span><br>Director, Character &amp; Prop designer, Storyboard Artist, Layout Artist, 2D Animator and Background Painter</p>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <img src="project2.PNG" alt="Project 2">
-            <h3>WHITE BOX</h3>
-            <p><span class="label">Logline</span><br>A young medical researcher awakens to the bloody reality of animal testing.</p>
-            <p><span class="label">My Role</span><br>Director, Character & Prop Designer, Storyboard Artist, 2D Animator, Cleanup Artist and Colorist</p>
-          </article>
+          <a class="project-link" href="white-box.html">
+            <article class="project-card">
+              <img src="project2.PNG" alt="Project 2">
+              <h3>WHITE BOX</h3>
+              <p><span class="label">Logline</span><br>A young medical researcher awakens to the bloody reality of animal testing.</p>
+              <p><span class="label">My Role</span><br>Director, Character &amp; Prop Designer, Storyboard Artist, 2D Animator, Cleanup Artist and Colorist</p>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <img src="p3.PNG" alt="Project 3">
-            <h3>FOREST</h3>
-            <p><span class="label">Logline</span><br>Twin children are lured deep into an enchanted forest by a fairy, only to discover the danger hidden beneath its beauty.</p>
-            <p><span class="label">My Role</span><br>Character & Prop Designer, Storyboard Artist</p>
-          </article>
+          <a class="project-link" href="forest.html">
+            <article class="project-card">
+              <img src="p3.PNG" alt="Project 3">
+              <h3>FOREST</h3>
+              <p><span class="label">Logline</span><br>Twin children are lured deep into an enchanted forest by a fairy, only to discover the danger hidden beneath its beauty.</p>
+              <p><span class="label">My Role</span><br>Character &amp; Prop Designer, Storyboard Artist</p>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <img src="p4.PNG" alt="Project 4">
-            <h3>TADPOLE</h3>
-            <p><span class="label">Logline</span><br>A young girl encounters a giant tadpole with a gaping wound in its belly and, at its request, stitches it closed—only to discover she has arrived too late.</p>
-            <p><span class="label">My Role</span><br>Director, Character Designer, Storyboard Artist, Animator, Sound Engineer</p>
-          </article>
+          <a class="project-link" href="tadpole.html">
+            <article class="project-card">
+              <img src="p4.PNG" alt="Project 4">
+              <h3>TADPOLE</h3>
+              <p><span class="label">Logline</span><br>A young girl encounters a giant tadpole with a gaping wound in its belly and, at its request, stitches it closed—only to discover she has arrived too late.</p>
+              <p><span class="label">My Role</span><br>Director, Character Designer, Storyboard Artist, Animator, Sound Engineer</p>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <img src="p5.PNG" alt="Project 5">
-            <h3>LOVE NOTE</h3>
-            <p><span class="label">Logline</span><br>The boy runs to get the love letter the girl living upstairs throws down to him.</p>
-            <p><span class="label">My Role</span><br>Character Designer, 2D Animator, Cleanup Artist and Colorist</p>
-          </article>
+          <a class="project-link" href="love-note.html">
+            <article class="project-card">
+              <img src="p5.PNG" alt="Project 5">
+              <h3>LOVE NOTE</h3>
+              <p><span class="label">Logline</span><br>The boy runs to get the love letter the girl living upstairs throws down to him.</p>
+              <p><span class="label">My Role</span><br>Character Designer, 2D Animator, Cleanup Artist and Colorist</p>
+            </article>
+          </a>
 
-          <article class="project-card">
-            <img src="p6.PNG" alt="Project 6">
-            <h3>CAT & FISH</h3>
-            <p><span class="label">Logline</span><br>A cat throws a big fish around.</p>
-            <p><span class="label">My Role</span><br>2D Animator, Backgroung Painter, Title-card Artist and Colorist</p>
-          </article>
+          <a class="project-link" href="cat-fish.html">
+            <article class="project-card">
+              <img src="p6.PNG" alt="Project 6">
+              <h3>CAT &amp; FISH</h3>
+              <p><span class="label">Logline</span><br>A cat throws a big fish around.</p>
+              <p><span class="label">My Role</span><br>2D Animator, Backgroung Painter, Title-card Artist and Colorist</p>
+            </article>
+          </a>
         </section>
       </main>
 
       <aside class="side-nav">
         <div class="side-nav-links">
           <a href="index.html">Back to Home</a>
+          <a href="today.html">TODAY</a>
+          <a href="white-box.html">WHITE BOX</a>
+          <a href="forest.html">FOREST</a>
+          <a href="tadpole.html">TADPOLE</a>
+          <a href="love-note.html">LOVE NOTE</a>
+          <a href="cat-fish.html">CAT &amp; FISH</a>
         </div>
       </aside>
 
