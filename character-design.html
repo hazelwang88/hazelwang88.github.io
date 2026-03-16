@@ -82,54 +82,94 @@
 
     .back-link {
       display: inline-block;
-      margin-bottom: 28px;
+      margin-bottom: 36px;
       font-size: 15px;
       font-weight: 700;
       color: #5e7686;
     }
 
     .section-title {
-      margin: 0 0 28px;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #5e7686;
+      margin: 0 0 22px;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #1f2529;
     }
 
-    .gallery {
+    .section-block {
+      margin-bottom: 70px;
+    }
+
+    .row {
       display: grid;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .row-2 {
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
     }
 
-    .gallery-item {
-      background: rgba(255, 255, 255, 0.28);
-      padding: 20px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    .row-3 {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    .gallery-item img {
+    .img-box {
+      background: rgba(255, 255, 255, 0.22);
+      padding: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 320px;
+    }
+
+    .img-box img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: contain;
       display: block;
-      margin-bottom: 14px;
     }
 
-    .gallery-item p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.6;
-      font-weight: 500;
+    @media (max-width: 1100px) {
+      .row-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .img-box {
+        height: 280px;
+      }
     }
 
-    @media (max-width: 900px) {
-      .gallery {
-        grid-template-columns: 1fr;
+    @media (max-width: 800px) {
+      .page {
+        padding: 22px 18px 40px;
       }
 
       .site-title h1 {
         font-size: 52px;
+      }
+
+      .site-title p {
+        font-size: 15px;
+      }
+
+      .row-2,
+      .row-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .img-box {
+        height: auto;
+        padding: 10px;
+      }
+
+      .img-box img {
+        height: auto;
+      }
+
+      .section-title {
+        font-size: 28px;
       }
     }
   </style>
@@ -151,17 +191,60 @@
 
     <a class="back-link" href="index.html">← Back to Home</a>
 
-    <h2 class="section-title">Character Design</h2>
+    <section class="section-block">
+      <h2 class="section-title">Character Design</h2>
 
-    <section class="gallery">
-      <div class="gallery-item">
-        <img src="character1.png" alt="Character design 1">
-        <p>Character design description here.</p>
+      <div class="row row-2">
+        <div class="img-box"><img src="cd01.jpg" alt=""></div>
+        <div class="img-box"><img src="cd02.jpg" alt=""></div>
       </div>
 
-      <div class="gallery-item">
-        <img src="character2.png" alt="Character design 2">
-        <p>Character design description here.</p>
+      <div class="row row-2">
+        <div class="img-box"><img src="cd03.jpg" alt=""></div>
+        <div class="img-box"><img src="cd04.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-3">
+        <div class="img-box"><img src="cd05.jpg" alt=""></div>
+        <div class="img-box"><img src="cd06.jpg" alt=""></div>
+        <div class="img-box"><img src="cd07.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-2">
+        <div class="img-box"><img src="cd08.jpg" alt=""></div>
+        <div class="img-box"><img src="cd09.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-2">
+        <div class="img-box"><img src="cd10.jpg" alt=""></div>
+        <div class="img-box"><img src="cd11.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-3">
+        <div class="img-box"><img src="cd12.jpg" alt=""></div>
+        <div class="img-box"><img src="cd13.jpg" alt=""></div>
+        <div class="img-box"><img src="cd14.jpg" alt=""></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2 class="section-title">Animal Character Design</h2>
+
+      <div class="row row-3">
+        <div class="img-box"><img src="acd01.jpg" alt=""></div>
+        <div class="img-box"><img src="acd02.jpg" alt=""></div>
+        <div class="img-box"><img src="acd03.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-2">
+        <div class="img-box"><img src="acd04.jpg" alt=""></div>
+        <div class="img-box"><img src="acd05.jpg" alt=""></div>
+      </div>
+
+      <div class="row row-3">
+        <div class="img-box"><img src="acd06.jpg" alt=""></div>
+        <div class="img-box"><img src="acd07.jpg" alt=""></div>
+        <div class="img-box"><img src="acd08.jpg" alt=""></div>
       </div>
     </section>
 
