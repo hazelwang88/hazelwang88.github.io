@@ -13,13 +13,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: "Manrope", Arial, sans-serif;
-      background: 
+      background:
         linear-gradient(135deg, rgba(255, 226, 196, 0.55) 0%, rgba(214, 231, 244, 0.35) 45%, rgba(167, 205, 230, 0.45) 100%),
         linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
-      color: #1f2529;
+      color: #243038;
       min-height: 100vh;
       background-attachment: fixed;
     }
@@ -83,6 +87,17 @@
       background: rgba(255, 255, 255, 0.62);
     }
 
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .content-column {
+      min-width: 0;
+    }
+
     .back-link {
       display: inline-block;
       margin-bottom: 36px;
@@ -91,16 +106,17 @@
       color: #4f7288;
     }
 
+    .section-block {
+      margin-bottom: 72px;
+    }
+
     .section-title {
       margin: 0 0 22px;
       font-size: 34px;
       line-height: 1.1;
       font-weight: 800;
       color: #4f7288;
-    }
-
-    .section-block {
-      margin-bottom: 70px;
+      scroll-margin-top: 30px;
     }
 
     .row {
@@ -134,7 +150,55 @@
       display: block;
     }
 
+    .side-nav {
+      position: sticky;
+      top: 28px;
+      align-self: start;
+      background: rgba(255, 255, 255, 0.22);
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .side-nav-title {
+      margin: 0 0 18px;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #4f7288;
+      text-align: center;
+    }
+
+    .side-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .side-nav-links a {
+      display: block;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #4f7288;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .side-nav-links a:hover {
+      background: rgba(255, 255, 255, 0.42);
+    }
+
     @media (max-width: 1100px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-nav {
+        position: static;
+        margin-bottom: 32px;
+      }
+
       .row-3 {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -154,6 +218,11 @@
       }
 
       .site-title p {
+        font-size: 15px;
+      }
+
+      .lang-switch a {
+        padding: 10px 16px;
         font-size: 15px;
       }
 
@@ -183,7 +252,7 @@
     <header class="topbar">
       <div class="site-title">
         <h1>Hazel Wang</h1>
-        <p>Character & Prop Design</p>
+        <p>Character &amp; Prop Design</p>
       </div>
 
       <div class="lang-switch">
@@ -192,65 +261,94 @@
       </div>
     </header>
 
-    <a class="back-link" href="index.html">← Back to Home</a>
+    <div class="page-layout">
 
-    <section class="section-block">
-      <h2 class="section-title">Character Design</h2>
+      <main class="content-column">
+        <a class="back-link" href="index.html">← Back to Home</a>
 
-      <div class="row row-2">
-        <div class="img-box"><img src="cd01.jpg" alt=""></div>
-        <div class="img-box"><img src="cd02.jpg" alt=""></div>
-      </div>
+        <section class="section-block">
+          <h2 id="character-design" class="section-title">Character Design</h2>
 
-      <div class="row row-2">
-        <div class="img-box"><img src="cd03.jpg" alt=""></div>
-        <div class="img-box"><img src="cd04.jpg" alt=""></div>
-      </div>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd01.jpg" alt=""></div>
+            <div class="img-box"><img src="cd02.jpg" alt=""></div>
+          </div>
 
-      <div class="row row-3">
-        <div class="img-box"><img src="cd05.jpg" alt=""></div>
-        <div class="img-box"><img src="cd06.jpg" alt=""></div>
-        <div class="img-box"><img src="cd07.jpg" alt=""></div>
-      </div>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd03.jpg" alt=""></div>
+            <div class="img-box"><img src="cd04.jpg" alt=""></div>
+          </div>
 
-      <div class="row row-2">
-        <div class="img-box"><img src="cd08.jpg" alt=""></div>
-        <div class="img-box"><img src="cd09.jpg" alt=""></div>
-      </div>
+          <div class="row row-3">
+            <div class="img-box"><img src="cd05.jpg" alt=""></div>
+            <div class="img-box"><img src="cd06.jpg" alt=""></div>
+            <div class="img-box"><img src="cd07.jpg" alt=""></div>
+          </div>
 
-      <div class="row row-2">
-        <div class="img-box"><img src="cd10.jpg" alt=""></div>
-        <div class="img-box"><img src="cd11.jpg" alt=""></div>
-      </div>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd08.jpg" alt=""></div>
+            <div class="img-box"><img src="cd09.jpg" alt=""></div>
+          </div>
 
-      <div class="row row-3">
-        <div class="img-box"><img src="cd12.jpg" alt=""></div>
-        <div class="img-box"><img src="cd13.jpg" alt=""></div>
-        <div class="img-box"><img src="cd14.jpg" alt=""></div>
-      </div>
-    </section>
+          <div class="row row-2">
+            <div class="img-box"><img src="cd10.jpg" alt=""></div>
+            <div class="img-box"><img src="cd11.jpg" alt=""></div>
+          </div>
 
-    <section class="section-block">
-      <h2 class="section-title">Animal Character Design</h2>
+          <div class="row row-3">
+            <div class="img-box"><img src="cd12.jpg" alt=""></div>
+            <div class="img-box"><img src="cd13.jpg" alt=""></div>
+            <div class="img-box"><img src="cd14.jpg" alt=""></div>
+          </div>
+        </section>
 
-      <div class="row row-3">
-        <div class="img-box"><img src="acd01.jpg" alt=""></div>
-        <div class="img-box"><img src="acd02.jpg" alt=""></div>
-        <div class="img-box"><img src="acd03.jpg" alt=""></div>
-      </div>
+        <section class="section-block">
+          <h2 id="animal-character-design" class="section-title">Animal Character Design</h2>
 
-      <div class="row row-2">
-        <div class="img-box"><img src="acd04.jpg" alt=""></div>
-        <div class="img-box"><img src="acd05.jpg" alt=""></div>
-      </div>
+          <div class="row row-3">
+            <div class="img-box"><img src="acd01.jpg" alt=""></div>
+            <div class="img-box"><img src="acd02.jpg" alt=""></div>
+            <div class="img-box"><img src="acd03.jpg" alt=""></div>
+          </div>
 
-      <div class="row row-3">
-        <div class="img-box"><img src="acd06.jpg" alt=""></div>
-        <div class="img-box"><img src="acd07.jpg" alt=""></div>
-        <div class="img-box"><img src="acd08.jpg" alt=""></div>
-      </div>
-    </section>
+          <div class="row row-2">
+            <div class="img-box"><img src="acd04.jpg" alt=""></div>
+            <div class="img-box"><img src="acd05.jpg" alt=""></div>
+          </div>
 
+          <div class="row row-3">
+            <div class="img-box"><img src="acd06.jpg" alt=""></div>
+            <div class="img-box"><img src="acd07.jpg" alt=""></div>
+            <div class="img-box"><img src="acd08.jpg" alt=""></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2 id="prop-design" class="section-title">Prop Design</h2>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="pd01.jpg" alt=""></div>
+            <div class="img-box"><img src="pd02.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="pd03.jpg" alt=""></div>
+            <div class="img-box"><img src="pd04.jpg" alt=""></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="side-nav">
+        <h3 class="side-nav-title">Navigate</h3>
+        <div class="side-nav-links">
+          <a href="index.html">Back to Home</a>
+          <a href="#character-design">Character Design</a>
+          <a href="#animal-character-design">Animal Character Design</a>
+          <a href="#prop-design">Prop Design</a>
+        </div>
+      </aside>
+
+    </div>
   </div>
 </body>
 </html>
