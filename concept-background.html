@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concept + Background - Hazel Wang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(255, 226, 196, 0.55) 0%, rgba(214, 231, 244, 0.35) 45%, rgba(167, 205, 230, 0.45) 100%),
+        linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
+      color: #5f6d94;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1780px;
+      margin: 0 auto;
+      padding: 36px 56px 60px;
+    }
+
+    .topbar {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .site-title h1 {
+      margin: 0;
+      font-size: 88px;
+      line-height: 1;
+      font-family: "Carter One", cursive;
+      font-weight: 400;
+      color: #66739a;
+    }
+
+    .title-sticker {
+      width: 150px;
+      height: auto;
+      display: block;
+      transform: rotate(6deg) translateY(-6px);
+      flex-shrink: 0;
+    }
+
+    .site-title p {
+      margin: 10px 0 0;
+      font-size: 18px;
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #7280a6;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .lang-switch a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #6b79a1;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .content-column {
+      min-width: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 36px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #7280a6;
+    }
+
+    .section-block {
+      margin-bottom: 72px;
+    }
+
+    .section-title {
+      margin: 0 0 22px;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #7280a6;
+      scroll-margin-top: 30px;
+    }
+
+    .row {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .row-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .img-box {
+      background: transparent;
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 420px;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 28px;
+      align-self: start;
+      background: rgba(255, 255, 255, 0.22);
+      padding: 30px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .side-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .side-nav-links a {
+      display: block;
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #7280a6;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .side-nav-links a:hover {
+      background: rgba(255, 255, 255, 0.42);
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #7280a6;
+    }
+
+    @media (max-width: 1200px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-nav {
+        position: static;
+        margin-bottom: 32px;
+      }
+
+      .row-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .img-box {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        padding: 22px 18px 40px;
+      }
+
+      .site-title h1 {
+        font-size: 52px;
+      }
+
+      .site-title p {
+        font-size: 15px;
+      }
+
+      .title-sticker {
+        width: 90px;
+      }
+
+      .lang-switch a {
+        padding: 10px 16px;
+        font-size: 15px;
+      }
+
+      .row-2,
+      .row-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .img-box {
+        height: auto;
+      }
+
+      .img-box img {
+        height: auto;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .side-nav-links a {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <div class="site-title">
+        <div class="title-row">
+          <h1>Hazel Wang</h1>
+          <img src="sticker.PNG" alt="" class="title-sticker">
+        </div>
+        <p>Concept + Background Painting</p>
+      </div>
+
+      <div class="lang-switch">
+        <a href="concept-background.html">EN</a>
+        <a href="concept-background-cn.html">中文</a>
+      </div>
+    </header>
+
+    <div class="page-layout">
+
+      <main class="content-column">
+        <a class="back-link" href="index.html">← Back to Home</a>
+
+        <section class="section-block">
+          <h2 id="concept-art" class="section-title">Concept Art</h2>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="concept01.jpg" alt=""></div>
+            <div class="img-box"><img src="concept02.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="concept03.jpg" alt=""></div>
+            <div class="img-box"><img src="concept04.jpg" alt=""></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2 id="background-painting" class="section-title">Background Painting</h2>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="bg01.jpg" alt=""></div>
+            <div class="img-box"><img src="bg02.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="bg03.jpg" alt=""></div>
+            <div class="img-box"><img src="bg04.jpg" alt=""></div>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2 id="layout-vs-background" class="section-title">Layout vs Background</h2>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="layout01.jpg" alt=""></div>
+            <div class="img-box"><img src="layout02.jpg" alt=""></div>
+          </div>
+
+          <div class="row row-2">
+            <div class="img-box"><img src="layout03.jpg" alt=""></div>
+            <div class="img-box"><img src="layout04.jpg" alt=""></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="side-nav">
+        <div class="side-nav-links">
+          <a href="index.html">Back to Home</a>
+          <a href="#concept-art">Concept Art</a>
+          <a href="#background-painting">Background Painting</a>
+          <a href="#layout-vs-background">Layout vs Background</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>
+      © 2026 Hazel Wang
+    </footer>
+
+  </div>
+</body>
+</html>
