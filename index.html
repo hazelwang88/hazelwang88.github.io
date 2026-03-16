@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-
   <style>
     * {
       box-sizing: border-box;
@@ -17,14 +16,13 @@
     body {
       margin: 0;
       font-family: "Manrope", Arial, sans-serif;
-      background: 
+      background:
         linear-gradient(135deg, rgba(255, 226, 196, 0.55) 0%, rgba(214, 231, 244, 0.35) 45%, rgba(167, 205, 230, 0.45) 100%),
         linear-gradient(to bottom, #f7f1e8 0%, #eaf1f5 100%);
-      color: #1f2529;
+      color: #5f6d94;
       min-height: 100vh;
       background-attachment: fixed;
     }
-
 
     a {
       text-decoration: none;
@@ -45,27 +43,6 @@
       padding-top: 10px;
     }
 
-    .lang-switch {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      margin-top: 12px;
-    }
-
-    .lang-switch a {
-      display: inline-block;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.42);
-      color: #1f3542;
-      font-size: 17px;
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    }
-
-    .lang-switch a:hover {
-      background: rgba(255, 255, 255, 0.62);
-    }
-
     .site-title h1 {
       margin: 0;
       font-size: 120px;
@@ -77,7 +54,6 @@
       color: #66739a;
     }
 
-
     .site-title p {
       margin: 10px 0 0;
       font-size: 18px;
@@ -85,9 +61,29 @@
       font-weight: 700;
       letter-spacing: 0.02em;
       text-transform: uppercase;
-      color: #7685ab;
+      color: #7280a6;
     }
 
+    .lang-switch {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .lang-switch a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #6b79a1;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255, 255, 255, 0.62);
+    }
 
     .layout {
       display: grid;
@@ -123,7 +119,7 @@
       box-shadow: none;
       padding: 0 24px 0 18px;
     }
-    
+
     .about-text {
       padding-top: 8px;
     }
@@ -134,7 +130,7 @@
       font-weight: 700;
       letter-spacing: 1.2px;
       text-transform: uppercase;
-      color: #4f7288;
+      color: #7280a6;
     }
 
     .about-text p {
@@ -142,8 +138,8 @@
       font-size: 20px;
       line-height: 1.85;
       font-weight: 500;
-      letter-spacing: 0px;
-      color: #3f6278;
+      letter-spacing: 0;
+      color: #5f6d94;
       max-width: 88%;
     }
 
@@ -203,7 +199,7 @@
       font-weight: 700;
       letter-spacing: -1px;
       text-transform: uppercase;
-      color: #4f7288;
+      color: #7280a6;
     }
 
     .project-card p {
@@ -211,13 +207,13 @@
       font-size: 16px;
       line-height: 1.65;
       font-weight: 700;
-      color: #3f6278;
+      color: #5f6d94;
     }
 
     .label {
       display: inline-block;
       margin-bottom: 2px;
-      color: #5f7f92;
+      color: #7280a6;
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: 0.8px;
@@ -236,7 +232,7 @@
       font-weight: 700;
       letter-spacing: 0.6px;
       text-transform: uppercase;
-      color: #3f6278;
+      color: #7280a6;
       text-align: center;
     }
 
@@ -250,7 +246,7 @@
     .button {
       display: block;
       padding: 22px 24px;
-      color: #3f6278;
+      color: #7280a6;
       background: rgba(255, 255, 255, 0.28);
       font-size: 17px;
       font-weight: 700;
@@ -261,7 +257,7 @@
     }
 
     .button:hover {
-      background: #dde6ec;
+      background: rgba(255, 255, 255, 0.42);
       transform: translateX(4px);
     }
 
@@ -269,7 +265,7 @@
       margin-top: 28px;
       font-size: 13px;
       font-weight: 700;
-      color: #6f8fa2;
+      color: #7280a6;
     }
 
     @media (max-width: 1100px) {
@@ -305,6 +301,11 @@
       }
 
       .site-title p {
+        font-size: 15px;
+      }
+
+      .lang-switch a {
+        padding: 10px 16px;
         font-size: 15px;
       }
 
@@ -344,7 +345,6 @@
       </div>
     </header>
 
-
     <div class="layout">
 
       <main class="main-column">
@@ -378,14 +378,14 @@
             <img src="project1.PNG" alt="Project 1">
             <h3>TODAY</h3>
             <p><span class="label">Logline</span><br>Today is the tomorrow of yesterday. When endings become beginnings, in which moment do we truly exist?</p>
-            <p><span class="label">My Role</span><br>Director, Character & Prop designer, Storyboard Artist, Layout Artist, 2D Animator and Background Painter</p>
+            <p><span class="label">My Role</span><br>Director, Character &amp; Prop designer, Storyboard Artist, Layout Artist, 2D Animator and Background Painter</p>
           </article>
 
           <article class="project-card">
             <img src="project2.PNG" alt="Project 2">
             <h3>WHITE BOX</h3>
             <p><span class="label">Logline</span><br>A young medical researcher awakens to the bloody reality of animal testing.</p>
-            <p><span class="label">My Role</span><br>Director, Character & Prop Designer, Storyboard Artist, 2D Animator, Cleanup Artist and Colorist</p>
+            <p><span class="label">My Role</span><br>Director, Character &amp; Prop Designer, Storyboard Artist, 2D Animator, Cleanup Artist and Colorist</p>
           </article>
         </section>
 
