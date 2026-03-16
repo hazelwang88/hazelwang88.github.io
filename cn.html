@@ -227,6 +227,32 @@
       transform: translateX(4px);
     }
 
+    .mobile-fab-wrap {
+      display: none;
+    }
+
+    .mobile-fab {
+      border: none;
+      background: rgba(255, 255, 255, 0.88);
+      color: #7280a6;
+      font-family: "Manrope", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
     footer {
       margin-top: 28px;
       font-size: 13px;
@@ -234,36 +260,26 @@
       color: #7280a6;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 800px) {
       .layout {
         grid-template-columns: 1fr;
       }
 
       .side-column {
-        position: static;
+        display: none;
       }
 
-      .nav-panel {
-        min-height: auto;
-      }
-
-      .button-grid {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        width: fit-content;
-      }
-    }
-
-    @media (max-width: 800px) {
       .page {
         padding: 22px 18px 40px;
       }
 
+      .topbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+
       .site-title h1 {
-        font-size: 46px;
+        font-size: 40px;
       }
 
       .site-title p {
@@ -272,6 +288,11 @@
 
       .title-sticker {
         width: 90px;
+      }
+
+      .lang-switch {
+        gap: 10px;
+        margin-top: 0;
       }
 
       .lang-switch a {
@@ -283,8 +304,7 @@
         grid-template-columns: 1fr;
       }
 
-      .block,
-      .nav-panel {
+      .block {
         padding: 22px;
       }
 
@@ -294,6 +314,40 @@
 
       .reel-block video {
         min-height: 260px;
+      }
+
+      .mobile-fab-wrap {
+        display: block;
+      }
+
+      .mobile-fab {
+        position: fixed;
+        right: 16px;
+        bottom: 18px;
+        z-index: 999;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        right: 16px;
+        bottom: 84px;
+        z-index: 998;
+        width: 230px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.65);
+        color: #7280a6;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
       }
     }
   </style>
@@ -349,15 +403,27 @@
         <div class="nav-panel">
           <h2>更多内容</h2>
           <div class="button-grid">
-            <a class="button" href="projects.html">项目</a>
-            <a class="button" href="character-design.html">角色 + 道具设计</a>
-            <a class="button" href="concept-background.html">概念设计 + 场景绘制</a>
-            <a class="button" href="gesture-drawing.html">动态速写</a>
-            <a class="button" href="contact.html">联系方式</a>
+            <a class="button" href="projects-cn.html">项目</a>
+            <a class="button" href="character-design-cn.html">角色 + 道具设计</a>
+            <a class="button" href="concept-background-cn.html">概念设计 + 场景绘制</a>
+            <a class="button" href="gesture-drawing-cn.html">动态速写</a>
+            <a class="button" href="contact-cn.html">联系方式</a>
           </div>
         </div>
       </aside>
 
+    </div>
+
+    <div class="mobile-fab-wrap">
+      <button class="mobile-fab" onclick="toggleMobileMenu()">目录</button>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="projects-cn.html">项目</a>
+        <a href="character-design-cn.html">角色 + 道具设计</a>
+        <a href="concept-background-cn.html">概念设计 + 场景绘制</a>
+        <a href="gesture-drawing-cn.html">动态速写</a>
+        <a href="contact-cn.html">联系方式</a>
+      </div>
     </div>
 
     <footer>
@@ -365,5 +431,12 @@
     </footer>
 
   </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
